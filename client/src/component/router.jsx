@@ -20,26 +20,25 @@ class Routing extends Component {
     return (
       <Router>
         <div>
-          <nav className="navbar navbar-expand-sm bg-dark justify-content-center">
-            <ul className="navbar-nav">
-              <li className="nav-item">
-                <Link className="nav-link" to="/">
+          <nav className='navbar navbar-expand-sm bg-dark justify-content-center'>
+            <ul className='navbar-nav'>
+              <li className='nav-item'>
+                <Link className='nav-link' to='/'>
                   Question 1
                 </Link>
               </li>
-              <li className="nav-item dropdown">
+              <li className='nav-item dropdown'>
                 <button
-                  className="nav-link btn btn-primary dropdown-toggle"
-                  id="navbardrop"
-                  data-toggle="dropdown"
-                >
+                  className='nav-link btn btn-primary dropdown-toggle'
+                  id='navbardrop'
+                  data-toggle='dropdown'>
                   Question 2
                 </button>
-                <div className="dropdown-menu">
-                  <Link className="dropdown-item" to="/contact">
+                <div className='dropdown-menu'>
+                  <Link className='dropdown-item' to='/contact'>
                     All Contacts
                   </Link>
-                  <Link className="dropdown-item" to="/add-contact">
+                  <Link className='dropdown-item' to='/add-contact'>
                     Add Contact
                   </Link>
                 </div>
@@ -48,22 +47,22 @@ class Routing extends Component {
           </nav>
 
           <Switch>
-            <Route exact path="/contact/all">
+            <Route exact path='/contact/all'>
               <About />
             </Route>
-            <Route exact path="/add-contact">
+            <Route exact path='/add-contact'>
               <AddContact />
             </Route>
-            <Route exact component={SingleContact} path="/single/:id">
+            <Route exact component={SingleContact} path='/single/:pn'>
               <SingleContact />
             </Route>
-            <Route exact path="/">
+            <Route exact path='/'>
               <Home />
             </Route>
 
-            <Redirect exact from="/contact" to="/contact/all" />
+            <Redirect exact from='/contact' to='/contact/all' />
 
-            <Redirect exact from="*" to="/" />
+            <Redirect exact from='*' to='/' />
           </Switch>
         </div>
       </Router>
