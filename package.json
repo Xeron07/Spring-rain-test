@@ -5,11 +5,12 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run server",
+    "start": "npm run node",
     "node": "node server.js",
     "server": "nodemon node",
     "ui": "npm start --prefix client",
-    "dev": "concurrently \" npm run server \" \" npm run ui \""
+    "dev": "concurrently \" npm run server \" \" npm run ui \"",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "repository": {
     "type": "git",
