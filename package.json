@@ -10,7 +10,7 @@
     "server": "nodemon node",
     "ui": "npm start --prefix client",
     "dev": "concurrently \" npm run server \" \" npm run ui \"",
-    "client-setup":"cd client && npm install && npm run build",
+    "client-setup": "cd client && npm install && npm run build",
     "heroku-postbuild": "npm install && npm run client-setup"
   },
   "repository": {
@@ -30,6 +30,7 @@
     "express": "^4.17.1",
     "express-session": "^1.17.1",
     "mongoose": "^5.10.0",
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "path": "^0.12.7"
   }
 }
