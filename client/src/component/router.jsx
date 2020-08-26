@@ -12,6 +12,7 @@ import {
 import Home from "./Home";
 import About from "./About";
 import AddContact from "./AddContact";
+import SingleContact from "./singleContact";
 
 class Routing extends Component {
   state = {};
@@ -47,16 +48,18 @@ class Routing extends Component {
           </nav>
 
           <Switch>
-            <Redirect from="/contact" to="/contact/all" />
             <Route exact path="/contact/all">
               <About />
             </Route>
             <Route exact path="/add-contact">
               <AddContact />
             </Route>
+            <Route exact component={SingleContact} path="/single/:pn"></Route>
             <Route exact path="/">
               <Home />
             </Route>
+
+            <Redirect exact from="/contact" to="/contact/all" />
           </Switch>
         </div>
       </Router>

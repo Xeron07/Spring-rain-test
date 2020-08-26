@@ -38,12 +38,15 @@ class AddContact extends Component {
                   value={this.state.phoneNumber}
                   id="inputPhoneNumber"
                   pattern="[0][1][1-9][0-9]{8}"
-                  placeholder="ex. 017XXXXXXXX"
+                  placeholder="Enter Phone Number"
                   onChange={(eve) =>
                     this.handleChangePhoneNumber(eve.target.value)
                   }
                   required
                 />
+                <small id="emailHelp" className="form-text text-muted">
+                  *valid pattern (ex. 017XXXXXXXX).
+                </small>
               </div>
 
               <button
