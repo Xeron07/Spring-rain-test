@@ -21,10 +21,6 @@ mongoose.connect(process.env.DB_CONNECTION, {
   useUnifiedTopology: true,
 });
 
-app.get("/", (req, res) => {
-  res.send("Hello World");
-});
-
 app.use("/api", api);
 
 //CONFIGURATION FOR PRODUCTION
