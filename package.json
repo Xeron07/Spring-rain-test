@@ -10,7 +10,8 @@
     "server": "nodemon node",
     "ui": "npm start --prefix client",
     "dev": "concurrently \" npm run server \" \" npm run ui \"",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "client-setup":"cd client && npm install && npm run build",
+    "heroku-postbuild": "npm install && npm run client-setup"
   },
   "repository": {
     "type": "git",
