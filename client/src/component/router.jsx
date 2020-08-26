@@ -54,7 +54,7 @@ class Routing extends Component {
             <Route exact path="/add-contact">
               <AddContact />
             </Route>
-            <Route exact component={SingleContact} path="/single/:id">
+            <Route exact component={SingleContact} path="/single/:pn">
               <SingleContact />
             </Route>
             <Route exact path="/">
